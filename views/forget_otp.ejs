@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MB Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-card {
+      width: 400px;
+      background-color: transparent;
+      border: 2px solid black;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+    }
+
+    .login-card h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .login-card input[type="text"],
+    .login-card input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .login-card button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .login-card button:hover {
+      background-color: #0056b3;
+    }
+    body{
+      /* background-image: url("/image/sign.jpg"); */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #email{
+      width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="/forget_otp" method="post">
+    <div class="login-card">
+      <h2>Enter Your OTP</h2>
+      <label for="OTP">OTP:</label>
+            <input type="text" id="number" name="otp" maxlength="6" required><br>
+            <button>Login</button>
+            <% if (error.length > 0) { %>
+  <div class="alert danger" style="color: red; font-weight: bold;">
+    <%= error %>
+  </div>
+<% } %>
+  </form>
+          
+      <!-- <p>Mobile number</p> -->
+      <!-- <input type="text" placeholder="Enter your mobile number">
+      <button>Request OTP</button> -->
+    </div>
+  </div>
+</body>
+</html>

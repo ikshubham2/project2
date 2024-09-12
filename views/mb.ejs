@@ -1,0 +1,771 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuscleBlaze</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="favicon2.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: dinbold;
+      }
+      .container_mb {
+        width: 100%;
+        height: 97px;
+        box-shadow: 0 3px 10px hsla(214, 9%, 48%, 0.302);
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 1000;
+      }
+      #nav_logo {
+        height: 90px;
+        width: 121px;
+        position: relative;
+        left: 5%;
+        top: 2px;
+      }
+      #srh {
+        position: relative;
+        left: 10%;
+        top: 21px;
+        height: 47px;
+        width: 60%;
+        border-radius: 5px;
+        background-color: #dbdde8;
+        border: none;
+        font-size: large;
+      }
+      .head_anchor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .a1 {
+        display: flex;
+        align-items: center;
+        font-family: dinbold;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 50px;
+        color: #20262e;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin: 10px 30px;
+        text-decoration: none;
+      }
+      .a2 {
+        display: flex;
+        align-content: center;
+        background: #f4c400;
+        text-decoration: none;
+        color: #20262e;
+      }
+      #txt {
+        text-align: center;
+        background: #f4c400;
+        text-decoration: none;
+        color: #20262e;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .home_pic {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      .card {
+        margin: 16px auto;
+        width: 18rem;
+      }
+      .card img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
+      .popular {
+        padding: 20px;
+        background-color: rgb(238, 219, 168);
+      }
+      #text {
+        font-family: dinbold;
+        color: black;
+        font-weight: bolder;
+        font-size: 32px;
+        margin-left: 10px;
+      }
+      #ylw {
+        height: 44px;
+        width: 4px;
+        background: #ffbe00;
+        margin-left: 10px;
+        position: relative;
+        top: 40px;
+      }
+      .spn {
+        border: 1px solid #20262e;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 6px;
+        color: #080a08;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .proof img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin: 20px 0;
+      }
+      .footer {
+        background-color: black;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .foot {
+        flex: 1;
+        margin: 10px 50px;
+        color: white;
+      }
+      .foot-products {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .nav-btn {
+        margin-left: 20px;
+        color: white;
+        background-color: #f4c400;
+        border: none;
+        border-radius: 5px;
+        font-size: large;
+        font-weight: 700;
+        height: 45px;
+      }
+      .nav-btn2 {
+        color: white;
+        background-color: #f4c400;
+        border: none;
+        border-radius: 5px;
+        font-size: large;
+        font-weight: 700;
+        height: 45px;
+        margin-left: 10px;
+      }
+
+      /* Media Queries */
+      @media (max-width: 1200px) {
+        #srh {
+          width: 50%;
+        }
+        .wrapper {
+          flex-wrap: wrap;
+        }
+      }
+      @media (max-width: 992px) {
+        .home_pic {
+          height: auto;
+        }
+        .card {
+          width: 40%;
+        }
+      }
+      @media (max-width: 768px) {
+        #srh {
+          width: 70%;
+        }
+        .card {
+          width: 90%;
+        }
+        .footer {
+          flex-direction: column;
+          align-items: center;
+        }
+        .foot {
+          margin: 10px 0;
+        }
+      }
+      @media (max-width: 576px) {
+        #srh {
+          width: 80%;
+        }
+        .home_pic {
+          width: 100%;
+          height: auto;
+        }
+        .card {
+          width: 100%;
+        }
+        .head_anchor {
+          flex-direction: column;
+        }
+        .a1 {
+          margin: 5px 0;
+        }
+        .footer {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container_mb">
+      <div class="nav">
+        <div>
+          <img src="/image/nav_logo.jpg" alt="muscleblaze" id="nav_logo" />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Type a product name eg. Bioenzyme"
+            id="srh"
+          />
+          <div>
+            <a href="/cart">
+              <i
+                class="fas fa-shopping-cart"
+                style="font-size: 36px; position: relative; left: 10%; bottom: 20px; cursor: pointer"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <% if (typeof data === 'undefined') { %>
+        <div class="nav-btns">
+          <form action="/login" method="get">
+            <button class="nav-btn">Login</button>
+          </form>
+          <form action="/registration" method="get">
+            <button class="nav-btn2">Registration</button>
+          </form>
+        </div>
+        <% } else { %>
+        <form action="/logout" method="post">
+          <button class="nav-btn">Logout</button>
+        </form>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="home">
+      <div class="head_anchor">
+        <a href="/allproducts" class="a1">ALL PRODUCTS</a>
+        <a href="##" class="a1">OFFERS</a>
+        <a href="/story" class="a1">OUR STORY</a>
+        <a href="/authenticity" class="a1">AUTHENTICITY</a>
+      </div>
+
+      <div id="txt">
+        <p>Level Up Your Fitness Journey With MuscleBlaze</p>
+      </div>
+      <div>
+        <img src="/image/mb_home.png" alt="homepic" class="home_pic" />
+      </div>
+      <div class="popular">
+        <div id="ylw"></div>
+        <div id="text">POPULAR</div>
+        <div class="pop-btn">
+          <span class="spn">Best Seller</span>
+          <span class="spn">Categories</span>
+        </div>
+
+        <div class="wrapper">
+          <div class="card">
+            <img src="/image/whey.jpeg" class="card-img-top" alt="whey protein" />
+            <div class="card-body">
+              <h5 class="card-title">Whey Protein</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Shop now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="/image/creatine.jpeg" class="card-img-top" alt="fish oil" />
+            <div class="card-body">
+              <h5 class="card-title">Fish Oil</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Shop now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="/image/massgainer.jpeg" class="card-img-top" alt="mass gainer" />
+            <div class="card-body">
+              <h5 class="card-title">Mass Gainer</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Shop now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof">
+        <img src="/image/gainer.jpeg" alt="proof image" />
+      </div>
+
+      <div class="footer">
+        <div class="foot">
+          <h5>TOP PRODUCTS</h5>
+          <a href="#" class="foot-products">Whey Protein</a>
+          <a href="#" class="foot-products">Fish Oil</a>
+          <a href="#" class="foot-products">Mass Gainer</a>
+        </div>
+
+        <div class="foot">
+          <h5>SUPPORT</h5>
+          <a href="#" class="foot-products">Help Center</a>
+          <a href="#" class="foot-products">Customer Service</a>
+          <a href="#" class="foot-products">Contact Us</a>
+        </div>
+
+        <div class="foot">
+          <h5>COMPANY</h5>
+          <a href="#" class="foot-products">About Us</a>
+          <a href="#" class="foot-products">Careers</a>
+          <a href="#" class="foot-products">Blog</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuscleBlaze</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="/image/mb-fav.jpg" type="image/x-icon " />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      * {
+  padding: 0px;
+  margin: 0px;
+  font-family: dinbold;
+}
+.container_mb {
+  /* display: flex; */
+  width: 1513px;
+    height: 97px;
+    box-shadow: 0 3px 10px hsla(214, 9%, 48%, 0.302);
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+/* .container, .container-lg, .container-md, .container-sm, .container-xl {
+  max-width: 1466px;
+.nav {
+  height: 93px;
+  width: 100%;
+  background-color: #fff;
+  display: flex; */
+#nav_logo {
+  height: 93px;
+  width: 93px;
+  position: relative;
+  left: 136px;
+  top: 2px;
+}
+#srh {
+  position: relative;
+  left: 187px;
+  top: 21px;
+  height: 47px;
+  width: 700px;
+  border-radius: 5px;
+  /* background-color: #414c58; */
+  background-color: #dbdde8;
+  border: none;
+  font-size: large;
+}
+.head_anchor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a1 {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  font-family: dinbold;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 77px;
+  letter-spacing: 0;
+  color: #20262e;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 62px;
+  text-decoration: none;
+}
+.a2 {
+  display: flex;
+  align-content: center;
+  background: #f4c400;
+  text-decoration: none;
+  color: #20262e;
+}
+#txt {
+  display: grid;
+  align-content: center;
+  background: #f4c400;
+  text-decoration: none;
+  color: #20262e;
+  text-align: center;
+  height: 44px;
+}
+.home_pic {
+  width: 1513px;
+}
+.card{
+  margin-left: 16px;
+}
+.popular {
+  height: 740px;
+  background-color: rgb(238, 219, 168);
+  position: relative;
+  top: -4px;
+  /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+#text {
+  text-transform: capitalize;
+  font-family: dinbold;
+  color: black;
+  font-weight: bolder;
+  font-size: 42px;
+  position: relative;
+  margin-left: 53px;
+}
+#ylw {
+  height: 44px;
+  width: 4px;
+  background: #ffbe00 0 0 no-repeat padding-box;
+  margin-right: 10px;
+  margin-left: 35px;
+  position: relative;
+  top: 40px;
+}
+.pop-btn {
+  /* border: 2px solid white; */
+  height: 34px;
+  width: 210px;
+  position: relative;
+  left: 51px;
+  top: 44px;
+}
+.spn {
+  color: white;
+  border: 1px solid #20262e;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px;
+  color: #080a08;
+  border-radius: 4px;
+  line-height: 18px;
+}
+#products {
+  border: 2px solid black; 
+  position: relative;
+  top: 70px;
+    height: 350px;
+    display: flex;
+}
+
+
+.wrapper{
+  display: flex;
+  margin: 75px;
+}
+.btn btn-primary{
+  background-color: #f4c400;
+}
+#img1{
+  height: 220;
+}
+#img2{
+  height: 220;
+}
+#img3{
+  height: 220;
+}
+#img4{
+  height: 220;
+}
+#proof{
+  width: 1473px;
+
+}
+#proof2{
+  width: 1473px;
+
+}
+#proof3{
+  width: 1513px;
+}
+.proof{
+  margin-top: -42px;
+}
+.footer{
+  background-color: black;
+  height: 500px;
+  display: flex;
+}
+.foot{
+  /* border: 2px solid red; */
+  height: 450px;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+.foot-products{
+  font-family: dinregular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.links2{
+  position: relative;
+    right: 232px;
+    display: flex;
+}
+.foot-3{
+  position: relative;
+  right: 98px;
+}
+.nav-btn{
+  position: relative;
+    left: 300px;
+    top: 20px;
+    width: 83px;
+    color: white;
+    background-color:  #f4c400;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 700;
+    height: 45px;
+}
+.nav-btn2{
+  position: relative;
+  left: 403px;
+    top: -25px;
+    width: 120px;
+    color: white;
+    background-color:  #f4c400;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 700;
+    height: 45px;
+}
+
+.circular-image {
+  width: 93px; 
+  height: 93px; 
+  border-radius: 50%;
+  object-fit: cover; 
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="container_mb">
+      <div class="nav">
+        <div>
+          <img src="/image/logo.jpg" alt="muscleblaze" id="nav_logo" class="circular-image" />
+        </div>
+        <div>
+          <form action="/search" method="post">
+          <input type="text" placeholder="      Type a product name eg. Bioenzyme"id="srh" />
+          <!-- <button type="submit" id="btn"> -->
+            <i class="fa fa-search" style="font-size: 28px;
+            position: relative;
+            left: 201px;
+            top: 24px;
+            cursor: pointer;"></i>
+          </button>
+        </form>
+          <div>
+            <a href="/cart">
+              <i class='fas fa-shopping-cart' style='font-size:36px; position: relative; left: 956px;bottom: 20px; cursor: pointer; color:black;'></i>
+            </a>
+        </div>
+        </div>
+       <% if (typeof data === 'undefined') { %>
+  <div class="nav-btns">
+    <form action="/login" method="get">
+      <button class="nav-btn">Login</button>
+    </form>
+    <form action="/registration" method="get">
+      <button class="nav-btn2">Registration</button>
+    </form>
+  </div>
+<% } else { %>
+  <form action="/logout" method="post">
+    <button class="nav-btn">Logout</button>
+  </form>
+<% } %>
+      
+      </div>
+    </div>
+    <div class="home">
+      <div class="head_anchor">
+        <a href="/allproducts" class="a1">ALL PRODUCTS</a>
+        <a href="##" class="a1">OFFERS</a>
+        <!-- <a href="##" class="a1">STORES</a> -->
+        <a href="/story" class="a1">OUR STORY</a>
+        <a href="/authenticity" class="a1">AUTHENTICITY</a>
+      </div>
+      <div id="txt">
+        <p style="margin-top: 15px;">Level Up Your Fitness Journey With MuscleBlaze</p>
+      </div>
+      <div>
+        <img src="/image/mb_home.png" alt="homepic" class="home_pic" />
+      </div>
+      <div class="aligner">
+      <div class="popular">
+        <div id="ylw"></div>
+        <div id="text">POPULAR</div>
+        <div class="pop-btn">
+          <span class="spn">Best Seller</span>
+          <span class="spn">Categories</span>
+        </div>
+        <div class="wrapper">
+        <div class="card" style="width: 18rem;">
+          <img src="/image/whey.jpeg" class="card-img-top" alt="..." id="img1">
+          <div class="card-body">
+            <h5 class="card-title">Bioenzyme perfect whey</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="/image/creatine.jpeg" class="card-img-top" alt="..." id="img2">
+          <div class="card-body">
+            <h5 class="card-title">MB Creatine</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="/image/gainer.jpeg" class="card-img-top" alt="..." id="img3">
+          <div class="card-body">
+            <h5 class="card-title">MB Gainer</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="/image/peanutbutter.jpeg" class="card-img-top" alt="..." id="img4">
+          <div class="card-body">
+            <h5 class="card-title">High Protein Peanut Butter</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="proof">
+        <img src="/image/proof.jpeg" alt="" id="proof">
+        <img src="/image/proof2.jpeg" alt="" id="proof2">
+        <img src="/image/proof3.jpeg" alt="" id="proof3">
+      </div>
+      <div class="footer">
+        <div class="foot">
+          <h5 style="color: white;">Products</h5>
+          <a href="" class="foot-products">Biozyme Performance Whey</a><br>
+          <a href="" class="foot-products">Bioenzyme whey pr</a><br>
+          <a href="" class="foot-products">creatine</a><br>
+          <a href="" class="foot-products">pre workout</a><br>
+          <a href="" class="foot-products">wrathx</a><br>
+          <a href="" class="foot-products">gainer</a><br>
+          <a href="" class="foot-products">l-carnitine</a><br>
+          <a href="" class="foot-products">l-Arginine</a><br>
+          <a href="" class="foot-products">glucose</a><br>
+          <a href="" class="foot-products">nsdkjw</a><br>
+          <a href="" class="foot-products">creatine momo</a><br>
+          <a href="" class="foot-products">pump</a><br>
+          <a href="" class="foot-products">wrathx yoyo high</a><br>
+          <a href="" class="foot-products">gainer xxxl</a><br>
+          <a href="" class="foot-products">l-carnitine 478t7832</a><br>
+          <a href="" class="foot-products">l-Argininekfnwj</a><br>
+          <a href="" class="foot-products">glucose g65</a><br>
+        </div>
+        <div class="links2">
+          <div class="foot">
+            <h5 style="color: white;">Categories</h5>
+            <a href="" class="foot-products">Proteins</a><br>
+            <a href="" class="foot-products">Gainers</a><br>
+            <a href="" class="foot-products">Ayurveda</a><br>
+            <a href="" class="foot-products">pre workout</a><br>
+            <a href="" class="foot-products">wrathx</a><br>
+            <a href="" class="foot-products">gainer</a><br>
+            <a href="" class="foot-products">l-carnitine</a><br>
+            <a href="" class="foot-products">l-Arginine</a><br>
+        </div>
+        <div class="links3">
+          <div class="foot-3">
+            <h5 style="color: white;">Useful Links</h5>
+            <a href="" class="foot-products">Proteins</a><br>
+            <a href="" class="foot-products">Gainers</a><br>
+            <a href="" class="foot-products">Ayurveda</a><br>
+            <a href="" class="foot-products">pre workout</a><br>
+            <a href="" class="foot-products">wrathx</a><br>
+            <a href="" class="foot-products">gainer</a><br>
+            <a href="" class="foot-products">l-carnitine</a><br>
+            <a href="" class="foot-products">l-Arginine</a><br>
+        </div>
+      </div>
+      </div>
+      <div class="line"></div>
+    </div>
+    </div>
+  </body>
+</html>

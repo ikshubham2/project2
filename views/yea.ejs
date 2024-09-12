@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check Authenticity</title>
+  <link rel="stylesheet" href="yea.css">
+  <style>
+    body {
+  background-color: #f2f2f2;
+  font-family: sans-serif;
+}
+
+.container {
+  /* width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+h2{
+  display: inline;
+}
+/* p {
+  display: inline;
+  margin-bottom: 30px;
+} */
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #e0a800;
+}
+
+.check-code {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.check-code img {
+  width: 100px;
+}
+
+.subscribe {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe input[type="checkbox"] {
+  margin-right: 10px;
+}
+.form{
+  width: 500px;
+  margin: -294px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 320px;
+  
+}
+.embed{
+  position: relative;
+  left: 157px;
+  display: inline;
+  top: 83px
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- video check-code -->
+    <div class="embed">
+      <h2>How to Auhtenticate?</h2><br>
+      <span>Watch Video to know How to Authenticate the Product.</span><br><br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Bm8g8g_txxw?si=jYlAmIsEkmaGUAq1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+     <!-- form  -->
+    <div class="form">
+    <h1>Check Authenticity</h1>
+    <p>Know if your MuscleBlaze product is authentic</p>
+      <form action="/authenticity" method="POST">
+        <% if (typeof message !== 'undefined') { %>
+            <p style="color:red;"><%= message %></p>
+        <% } %>
+      <label for="unique-code">Enter Unique code</label>
+      <input type="text" id="unique-code" name="number" placeholder="e.g. #H876543">
+      <label for="mobile-number">Mobile</label>
+      <input type="tel" id="mobile-number" placeholder="Mobile Number">
+      <button type="submit">Check Now</button>
+    </form>
+    <div class="subscribe">
+      <input type="checkbox" id="subscribe">
+      <label for="subscribe">Subscribe me to articles, deals and more!</label>
+    </div>
+  </div>
+  </div>
+</body>
+</html>

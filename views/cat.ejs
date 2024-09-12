@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header{
+    background-color: #f2f2f2;
+    padding: 1rem;
+    text-align: center;
+}
+main{
+    padding: 1rem;
+}
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.category{
+    width: 200px;
+    height: 439px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.category img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+.category h3{
+    padding: 1rem 0;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+    </style> 
+</head>
+<body>
+    <header>
+        <h1>Home / Categories</h1>
+    </header>
+    <main>
+        <h2>| Categories</h2>
+        <section class="categories">
+
+            <div class="category" data-category="protein">
+                <h3>Protein</h3>
+                <img src="/image/whey.jpeg" alt="Protein">
+                <a href="/category/1" class="btn">view products</a>
+            </div>
+
+            <div class="category" data-category="gainer">
+                <h3>Gainer</h3>
+                <img src="/image/gainer.jpeg" alt="Gainer">
+                <a href="/category/2" class="btn">view products</a>
+            </div>
+
+            <div class="category" data-category="pre-post-workout">
+                <h3>Pre/Post Workout</h3>
+                <img src="/image/Pre.jpeg" alt="Pre/Post Workout">
+                <a href="/category/3" class="btn">view products</a>
+            </div>
+            
+            <div class="category" data-category="fat-loss">
+                <h3>Fat Loss</h3>
+                <img src="/image/creatine.jpeg" alt="Fat Loss">
+                <a href="/category/4" class="btn">view products</a>
+            </div>
+           
+        </section>
+    </main>
+   
+</body>
+</html>
